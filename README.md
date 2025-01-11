@@ -31,7 +31,7 @@ pi(4) will raise a syntax error because pi would be interpreted as a function in
 a constant.
 ## Indeterminate Forms
 There is support for indeterminate forms in which the calculator returns undefined.
-### Addition:
+### Addition
 -inf + inf  
 inf + -inf
 ### Subtraction
