@@ -163,6 +163,26 @@ variant<string, double> ln(vector<double> args) {
    return r2;
 }
 
+variant<string, double> sqrt(vector<double> args) {
+
+   if (args.size() == 2) {
+
+      if (args[1] < 0) return "imaginary";
+
+      double r = std::sqrt(args[1]);
+
+      return exp_(r, args[0]);
+   }
+
+   if (args[0] < 0) return "imaginary";
+
+   double r2 = std::sqrt(args[0]);
+
+   if (isnan(r2)) return "undefined";
+
+   return r2;
+}
+
 // Map all functions to later be initiated for use
 
 map<string, variant<string, double>(*)(vector<double>)> init_functions() {
@@ -174,7 +194,7 @@ map<string, variant<string, double>(*)(vector<double>)> init_functions() {
    funcs["tan"] = tan;
    funcs["log"] = log;
    funcs["ln"] = ln;
-
+   funcs["sqrt"] = sqrt;
    return funcs;
 }
 
