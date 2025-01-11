@@ -292,7 +292,7 @@ variant<bool, string> syntax_checker(vector<string> tokens) {
 
             if (functions.count(s) == 1) {
 
-                if (tokens.size() == 1) return "Function syntax error (1)!";
+                if (tokens.size() == 1) return "Function syntax error!";
 
                 int next_index = i + 1;
 
@@ -302,13 +302,13 @@ variant<bool, string> syntax_checker(vector<string> tokens) {
 
                     if (is_number(next_token)) {
 
-                        if (next_token.find(".") != string::npos) return "Function syntax error (2)!";
-                        if (next_token.length() > 1 && next_token[0] == '0') return "Function syntax error (3)!";
+                        if (next_token.find(".") != string::npos) return "Function syntax error!";
+                        if (next_token.length() > 1 && next_token[0] == '0') return "Function syntax error!";
                     }
 
                     if (is_operator(next_token)) {
 
-                        if (next_token != "(") return "Function syntax error(4)!";
+                        if (next_token != "(") return "Function syntax error!";
 
                         i++;
 
@@ -324,10 +324,10 @@ variant<bool, string> syntax_checker(vector<string> tokens) {
                         if (nexter_token != "(") return "Function syntax error (5)!";
                     }
 
-                    else return "Function syntax error (6)!";
+                    else return "Function syntax error!";
                 }
 
-                else return "Function syntax error (7)!";
+                else return "Function syntax error!";
             }
 
             else if (constants.count(s) == 1) {
