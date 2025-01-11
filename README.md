@@ -3,10 +3,23 @@ Console Calculator with Advanced Features
 
 # Features
 
-Operations: + - * / ^ %\n
-Functions: sin, cos, tan, log, ln, sqrt\n
-Constants: pi, e, inf\n
-
+#Operations
++
+-
+*
+/
+^
+%
+#Functions
+sin
+cos
+tan
+log
+ln
+sqrt
+#Constants
+pi, e, inf\n
+# Information
 All functions have base capabilities. Functions that traditionally use bases such as log
 can be typed as logb(n), where b is a positive integer base. If you include a base for a
 function that traditionally does not use a base such as sine, the base will be
