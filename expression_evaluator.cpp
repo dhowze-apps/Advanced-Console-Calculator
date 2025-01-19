@@ -584,7 +584,6 @@ variant<string, double> evaluator(vector<string> tokens) {
 
         i++;
     }
-    
     // Evaluate what is left
     return evaluate(tokens);
 }
