@@ -31,7 +31,9 @@ int main() {
             
             else cout << *r2 << endl;
             
-        } else cout << *r << endl;
+        }
+
+        else cout << *r << endl;
     }
 
     return 0;
